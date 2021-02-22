@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>console</title>
+	</head>
+	<body>
+		<form method = "post" action = "/">
+			<p>
+				<input name="string">
+				<button>Add to queue</button>
+			</p>
+		</form>
+		<form method = "get" action = "/execute">
+			<p>
+				<button>Execute queue</button>
+			</p>
+		</form>
+		<hr/>
+		<p>
+			Queue:
+			<br>
+			{% for line in list %}
+			{{line}}
+			<br>
+			{% endfor %}
+		</p>
+	</body>
+</html>

@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
+
 		<meta charset="UTF-8">
 		<title>console</title>
+
 	</head>
 	<body>
+
+		<p>
+			{% for line in list %}
+				{{line}}
+				<br>
+			{% endfor %}
+			{% for i in range(30 - length)%}
+				<br>
+			{% endfor %}
+		</p>
+
+		<hr id=""/>
+
 		<form method = "post" action = "/">
 			<p>
-				<input name="string">
+				<input name="string" autocomplete="off" autofocus>
 				<button>Add to queue</button>
 			</p>
 		</form>
-		<form method = "get" action = "/execute">
+
+		<form method = "get" action = "/exec">
 			<p>
-				<button>Execute queue</button>
+				<button>Execute</button>
 			</p>
 		</form>
-		<hr/>
-		<p>
-			Queue:
-			<br>
-			{% for line in list %}
-			{{line}}
-			<br>
-			{% endfor %}
-		</p>
+
+		<form method = "get" action = "/clear">
+			<p>
+				<button>Clear screen</button>
+			</p>
+		</form>
+
 	</body>
 </html>
